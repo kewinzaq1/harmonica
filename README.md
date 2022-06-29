@@ -1,6 +1,8 @@
 
 <h1 align="center">Harmonica - Recruitment Task</h1>
 
+# Live 📍
+https://harmonica.vercel.app/
 ## Project Overview 🎉
 <p>Task prepared for recruitment purpose</p>
 
@@ -24,6 +26,5 @@
 | `npm run test`  | Run tests              |     
 
 
-## Live 📍
 
 ## License 🔱

@@ -10,9 +10,6 @@ export const SecondLeveWrapper = ({categoryId}: Partial<Category>) => {
   const filtered = filterByParent(categories, categoryId as number)
   const items = filterByLevel(filtered, 2)
 
-  console.log(items)
-  console.log(filtered)
-
   return (
     <div>
       {items.map(item => (

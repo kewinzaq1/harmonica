@@ -1,4 +1,3 @@
-import React from 'react'
 import {Category} from '../../utils/interfaces/Category'
 import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 import {BsChevronDown} from 'react-icons/bs'
