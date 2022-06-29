@@ -8,11 +8,11 @@ import {Category} from '../interfaces/Category'
 const CategoryContext = React.createContext<Context | null>(null)
 
 export const CategoryProvider = ({children}: {children: ReactNode}) => {
-  const {
-    isLoading,
-    error,
-    data: categories
-  } = useQuery('/categories', fetchCategories)
+  const {isLoading, error, data} = useQuery('/categories', fetchCategories)
+
+  const categories: Category[] = data?.sort(
+    (a: Category, b: Category) => a.sortOrder - b.sortOrder
+  )
 
   return (
     <CategoryContext.Provider value={{isLoading, error, categories}}>
