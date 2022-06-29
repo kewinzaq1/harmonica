@@ -1,5 +1,4 @@
-import React from 'react'
-import {Category} from '../../interfaces/Category'
+import {Category} from '../../utils/interfaces/Category'
 import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 
 export const ThirdLevelItem = (props: Category) => {

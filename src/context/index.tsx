@@ -1,9 +1,9 @@
 import * as React from 'react'
 import {ReactNode} from 'react'
 import {useQuery} from 'react-query'
-import {Context} from '../interfaces/Context'
+import {Context} from '../utils/interfaces/Context'
 import {fetchCategories} from '../utils/fetchers/fetchCategories'
-import {Category} from '../interfaces/Category'
+import {Category} from '../utils/interfaces/Category'
 
 const CategoryContext = React.createContext<Context | null>(null)
 

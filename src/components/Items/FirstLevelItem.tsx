@@ -1,13 +1,13 @@
 import * as React from 'react'
-import {Category} from '../../interfaces/Category'
+import {Category} from '../../utils/interfaces/Category'
 import {BsChevronDown} from 'react-icons/bs'
 import {SecondLeveWrapper} from '../Wrappers/SecondLeveWrapper'
 import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 
 export const FirstLevelItem = ({
-  sportId,
   categoryName,
-  eventsCount
+  eventsCount,
+  categoryId
 }: Category) => {
   const {isOpen, handleOpen} = useOpenHandler()
 
@@ -28,7 +28,7 @@ export const FirstLevelItem = ({
         </div>
         {isOpen && (
           <ul>
-            <SecondLeveWrapper sportId={sportId} />
+            <SecondLeveWrapper categoryId={categoryId} />
           </ul>
         )}
       </li>

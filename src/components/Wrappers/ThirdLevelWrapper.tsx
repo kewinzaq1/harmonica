@@ -1,4 +1,4 @@
-import {Category} from '../../interfaces/Category'
+import {Category} from '../../utils/interfaces/Category'
 import {filterByParent} from '../../utils/filters/filterByParent'
 import {useCategories} from '../../context'
 import {filterByLevel} from '../../utils/filters/filterByLevel'
