@@ -1,7 +1,6 @@
 import React from 'react'
-import {Category} from '../interfaces/Category'
-import {BsChevronDown} from 'react-icons/bs'
-import {useOpenHandler} from '../utils/hooks/useOpenHandler'
+import {Category} from '../../interfaces/Category'
+import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 
 export const ThirdLevelItem = (props: Category) => {
   const {isOpen: isChecked, handleOpen: handleChecked} = useOpenHandler()

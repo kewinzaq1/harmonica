@@ -1,33 +1,21 @@
 import * as React from 'react'
-import {Category} from '../interfaces/Category'
+import {Category} from '../../interfaces/Category'
 import {BsChevronDown} from 'react-icons/bs'
-import {findBySport} from '../utils/filters/findBySport'
-import {useCategories} from '../context'
-import {SecondLeveWrapper} from './SecondLeveWrapper'
-import {useOpenHandler} from '../utils/hooks/useOpenHandler'
+import {SecondLeveWrapper} from '../Wrappers/SecondLeveWrapper'
+import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 
-export const SportItem = ({
+export const FirstLevelItem = ({
   sportId,
   categoryName,
-  eventsCount,
-  categoryId
+  eventsCount
 }: Category) => {
-  const {categories} = useCategories()
   const {isOpen, handleOpen} = useOpenHandler()
-
-  console.log(isOpen)
-
-  if (!sportId && !categories && !categoryId) {
-    return <p>Loading...</p>
-  }
-
-  const filtered = findBySport(categories, sportId as number)
 
   return (
     <>
       <li className={'flex flex-col cursor-pointer'}>
         <div
-          className="flex items-center justify-between w-100"
+          className="flex items-end justify-between w-100"
           onClick={handleOpen}
         >
           <p className={'font-semibold text-sm'}>
@@ -40,7 +28,7 @@ export const SportItem = ({
         </div>
         {isOpen && (
           <ul>
-            <SecondLeveWrapper items={filtered} />
+            <SecondLeveWrapper sportId={sportId} />
           </ul>
         )}
       </li>
