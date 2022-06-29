@@ -6,15 +6,12 @@ export const ThirdLevelItem = (props: Category) => {
 
   return (
     <>
-      <div
-        className="ml-4 flex items-center justify-between w-100"
-        onClick={handleChecked}
-      >
+      <div className="flex items-center gap-1 w-100" onClick={handleChecked}>
+        <input type="checkbox" checked={isChecked} onChange={handleChecked} />
         <p className={'font-semibold text-xs'}>
           {props.categoryName}
           <span className={'ml-1 font-light'}>({props.eventsCount})</span>
         </p>
-        <input type="checkbox" checked={isChecked} onChange={handleChecked} />
       </div>
     </>
   )
