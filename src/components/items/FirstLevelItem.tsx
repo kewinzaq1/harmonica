@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Category} from '../../utils/interfaces/Category'
 import {BsChevronDown} from 'react-icons/bs'
-import {SecondLeveWrapper} from '../Wrappers/SecondLeveWrapper'
+import {SecondLeveWrapper} from '../wrappers/SecondLeveWrapper'
 import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 
 export const FirstLevelItem = ({

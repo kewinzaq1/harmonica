@@ -2,7 +2,7 @@ import React from 'react'
 import {Category} from '../../utils/interfaces/Category'
 import {useOpenHandler} from '../../utils/hooks/useOpenHandler'
 import {BsChevronDown} from 'react-icons/bs'
-import {ThirdLevelWrapper} from '../Wrappers/ThirdLevelWrapper'
+import {ThirdLevelWrapper} from '../wrappers/ThirdLevelWrapper'
 
 export const SecondLevelItem = (props: Category) => {
   const {isOpen, handleOpen} = useOpenHandler()
@@ -21,7 +21,7 @@ export const SecondLevelItem = (props: Category) => {
           className={`${isOpen && 'rotate-180'} transition-transform`}
         />
       </div>
-      {isOpen && <ThirdLevelWrapper categoryId={props.categoryId} />}
+      {isOpen && <ThirdLevelWrapper {...props} />}
     </>
   )
 }

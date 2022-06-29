@@ -1,5 +1,5 @@
 import {Category} from '../../utils/interfaces/Category'
-import {SecondLevelItem} from '../Items/SecondLevelItem'
+import {SecondLevelItem} from '../items/SecondLevelItem'
 import {useCategories} from '../../context'
 import {filterByLevel} from '../../utils/filters/filterByLevel'
 import {filterByParent} from '../../utils/filters/filterByParent'
@@ -9,6 +9,9 @@ export const SecondLeveWrapper = ({categoryId}: Partial<Category>) => {
 
   const filtered = filterByParent(categories, categoryId as number)
   const items = filterByLevel(filtered, 2)
+
+  console.log(items)
+  console.log(filtered)
 
   return (
     <div>

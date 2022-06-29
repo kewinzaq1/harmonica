@@ -4,15 +4,19 @@ import {useQuery} from 'react-query'
 import {Context} from '../utils/interfaces/Context'
 import {fetchCategories} from '../utils/fetchers/fetchCategories'
 import {Category} from '../utils/interfaces/Category'
+import {parseCategories} from '../utils/parsers/parseCategories'
 
 const CategoryContext = React.createContext<Context | null>(null)
 
 export const CategoryProvider = ({children}: {children: ReactNode}) => {
   const {isLoading, error, data} = useQuery('/categories', fetchCategories)
 
-  const categories: Category[] = data?.sort(
-    (a: Category, b: Category) => a.sortOrder - b.sortOrder
-  )
+  if (isLoading) {
+    return <p>Is Loading</p>
+  }
+
+  const categories: Category[] = parseCategories(data)
+  console.log('categories', categories)
 
   return (
     <CategoryContext.Provider value={{isLoading, error, categories}}>
