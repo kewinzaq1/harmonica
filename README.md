@@ -21,7 +21,6 @@ https://harmonica.vercel.app/
 ## Attention ⚠
 Before using application you must visit  https://cors-anywhere.herokuapp com/corsdemo and click **request temporary access to the demo server**.
 
-️
 
 ## Available scripts
 
@@ -30,7 +29,6 @@ Before using application you must visit  https://cors-anywhere.herokuapp com/cor
 | `npm install`   | install dependencies   |     
 | `npm run start` | Open local server      |     
 | `npm run build` | Create optimized build |     
-| `npm run test`  | Run tests              |     
 
 
 
