@@ -13,6 +13,7 @@ https://harmonica.vercel.app/
 |---------------|--------------------------------|
 | React         | Frontend Framework             |
 | TypeScript    | Language (Superset Javascript) |
+| TailwindCSS   | Utility CSS                    |
 | React-Query   | Data-fetching library          |
 | Context API   | State Management               |
 | CORS Anywhere | Cors Proxy                     |
