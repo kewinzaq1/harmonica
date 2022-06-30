@@ -19,7 +19,7 @@ https://harmonica.vercel.app/
 
 
 ## Attention ⚠
-Before using application you must visit  https://cors-anywhere.herokuapp com/corsdemo and click **request temporary access to the demo server**.
+Before using application you must visit  https://cors-anywhere.herokuapp.com/corsdemo and click **request temporary access to the demo server**.
 
 
 ## Available scripts
